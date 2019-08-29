@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Leonardo Venezia</title>
+    <meta name="description" content="Leonardo Venezia">
+    <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
+    <link  rel="icon"   href="assets/l.png" type="image/png">
+    <script src="js/index.js"></script>
+  </head>
+  <body>
+    <a-scene>
+
+      <!-- CAMERA -->
+
+      <a-entity 
+        camera look-controls wasd-controls
+        followed
+        position="0 40 40"
+        animation="property:position; to:0 1.6 0; dur:3000; delay:1000;">
+        <!-- animation__rotation="property:rotation; to:0 0 0; dur:3000; delay:1000;" -->
+        <a-entity 
+          cursor position="0 0 -1"
+          geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
+          material="color: #039be5"></a-entity> 
+      </a-entity>
+
+      <!-- EVIROMENT -->
+
+      <a-entity environment="preset: forest; dressingAmount: 2000; groundColor: #445; groundColor: #aab18c; groundTexture: walkernoise"></a-entity>
+
+      <!-- ASSETS -->
+
+      <a-assets>
+        <img src="assets/perfil.jpg" id="perfil">
+        <img src="assets/wall.jpg" id="wall">
+      </a-assets>
+
+      <!-- WELCOME WALL -->
+
+      <a-entity geometry="primitive: box; height:2; width: 4; depth:0.1" 
+        material="shader: flat; color: rgb(0,0,0); opacity:.1"
+        position="0 1.5 -2"
+        id="follower">
+        <a-entity
+          transparent="true"
+          material="color: #000; transparent: true; opacity: .8"
+          position="-1 .5 0.25"
+          geometry="primitive: plane; height:.16; width: 1.2;">
+        </a-entity>
+        <a-text
+          position="-1.5 .5 0.25"
+          scale=".5 .5 .5"
+          align="left" 
+          anchor="left" 
+          color="white"
+          value="Leonardo Venezia"></a-text>
+        <a-entity
+          transparent="true"
+          material="color: #000; transparent: true; opacity: .8"
+          position="-1 0.3 0.25"
+          geometry="primitive: plane; height:.15; width: 1.2;">
+        </a-entity>
+        <a-text
+          position="-1.5 0.3 0.25"
+          scale=".4 .4 .4"
+          anchor="left" 
+          color="white"
+          enlace="https://www.linkedin.com/in/leovenezia"
+          value="Web UI Developer"></a-text>
+        <a-entity
+          transparent="true"
+          material="color: #000; transparent: true; opacity: .8"
+          position="-1 0.1 0.25"
+          geometry="primitive: plane; height:.15; width: 1.2;"
+          enlace="https://www.linkedin.com/in/leovenezia">
+        </a-entity>
+        <a-text
+          position="-1.5 0.1 0.25"
+          scale=".4 .4 .4"
+          anchor="left" 
+          color="white"
+          value="LinedIn: /in/leovenezia/"></a-text>
+        <a-entity
+          transparent="true"
+          material="color: #000; transparent: true; opacity: .8"
+          position="-1 -0.1 0.25"
+          geometry="primitive: plane; height:.15; width: 1.2;"
+          enlace="https://github.com/sirleito">
+        </a-entity>
+        <a-text
+          position="-1.5 -0.1 0.25"
+          scale=".4 .4 .4"
+          anchor="left" 
+          color="white"
+          value="Github: sirleito"></a-text>
+        <a-image 
+          src="#perfil"
+          position="1 .25 0.25"
+          geometry="height: 1; width: 1"
+         ></a-image>
+      </a-entity>
+
+
+      <!-- Skills -->
+      <!-- material="shader: flat; color: rgb(0,0,0)" -->
+      <a-entity 
+        src="#wall"
+        geometry="primitive: box; height:3; width: 4; depth:0.1" 
+        
+        position="7.5 1.5 -7.5"
+        rotation="0 -30 0">
+        <a-text
+          position="-0.3 .9 0.25"
+          color="white"
+          scale="1.1 1.1 1.1"
+          value="Skills"></a-text>
+        <a-text
+          position="-.65 .45 0.25"
+          scale=".8 .8 .8"
+          anchor="left" 
+          color="white"
+          value="HTML - CSS - JS"></a-text>
+        <!-- polymer react  -->
+        <a-text
+          position="-.75 0 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="React"></a-text>
+        <a-text
+          position=".2 0 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Polymer 2"></a-text>
+        <!-- less sass node chia  -->
+        <a-text
+          position="-1.2 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Less"></a-text>
+        <a-text
+          position="-.6 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Sass"></a-text>
+        <a-text
+          position=".15 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Node"></a-text>
+        <a-text
+          position="0.85 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Chai"></a-text>
+
+      </a-entity>
+
+      <!-- Work Experience -->
+      <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
+        material="shader: flat; color: rgb(0,0,0)"
+        position="-7.5 1.5 -7.5"
+        rotation="0 30 0">
+        <a-text
+          position="-.85 .9 0.25"
+          color="white"
+          scale="1.1 1.1 1.1"
+          value="Work Experience"></a-text>
+          <!-- Globant -->
+        <a-text
+          position="-1.5 .45 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Web UI Developer Ssr | Globant 2018-Present"></a-text>
+        <!-- Educacion It  -->
+        <a-text
+          position="-1.5 0 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Web Dev Teacher | Educacion It 2018-Present"></a-text>
+        <!-- Pi Digital Marketing  -->
+        <a-text
+          position="-1.5 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Dev CoFunder | Pi Digital Marketing 2016-2018"></a-text>
+
+      </a-entity>
+
+
+      <!-- Other Skills -->
+      <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
+        material="shader: flat; color: rgb(0,0,0)"
+        position="-7.5 1.5 5.5"
+        rotation="0 150 0">
+        <a-text
+          position="-.85 .9 0.25"
+          color="white"
+          scale="1.1 1.1 1.1"
+          value="Other Skills"></a-text>
+          <!-- Git -->
+        <a-text
+          position="-1.5 .45 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Git : Github - Bitbucket"></a-text>
+        <!-- Scrum  -->
+        <a-text
+          position="-1.5 0 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="Scrum : Jira - Trello (dev perspective)"></a-text>
+        <!-- Pi Digital Marketing  -->
+        <a-text
+          position="-1.5 -.5 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="AFRAME - JQuery - Boostrap - Materialize"></a-text>
+
+      </a-entity>
+
+
+      <!-- my interests -->
+      <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
+        material="shader: flat; color: rgb(0,0,0)"
+        position="7.5 1.5 5.5"
+        rotation="0 210 0">
+        <a-text
+          position="-.55 .9 0.25"
+          color="white"
+          scale="1.1 1.1 1.1"
+          value="Who I am?"></a-text>
+          <!-- who I am? -->
+        <a-text
+          position="-1.75 .35 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="I'm dev, music producer, game design student. I love art in all its expressions. I like politics. I don't have a tv I like coffee and pastries."></a-text>
++
+        <a-text
+          position="-1.75 -.3 0.25"
+          scale=".7 .7 .7"
+          anchor="left" 
+          color="white"
+          value="I usually find an answer, when it seems that there is none left."></a-text> 
+
+      </a-entity>
+      <a-sky></a-sky>
+    </a-scene>
+  </body>
+</html>
