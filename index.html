@@ -6,7 +6,8 @@
     <meta name="description" content="Leonardo Venezia">
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
     <script src="https://unpkg.com/aframe-environment-component@1.1.0/dist/aframe-environment-component.min.js"></script>
-    <link  rel="icon"   href="assets/l.png" type="image/png">
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v6.0.0/dist/aframe-extras.min.js"></script>
+    <link rel="icon" href="assets/l.png" type="image/png">
     <script src="js/index.js"></script>
   </head>
   <body>
@@ -18,8 +19,8 @@
         camera look-controls wasd-controls
         followed
         position="0 40 40"
-        animation="property:position; to:0 1.6 0; dur:3000; delay:1000;">
-        <!-- animation__rotation="property:rotation; to:0 0 0; dur:3000; delay:1000;" -->
+        animation="property:position; to:0 1.6 0; dur:3000; delay:1000;"
+        >
         <a-entity 
           cursor position="0 0 -1"
           geometry="primitive: ring; radiusInner: 0.02; radiusOuter: 0.03"
@@ -28,7 +29,8 @@
 
       <!-- EVIROMENT -->
 
-      <a-entity environment="preset: forest; dressingAmount: 2000; groundColor: #445; groundColor: #aab18c; groundTexture: walkernoise"></a-entity>
+      <a-entity environment="preset: forest; dressingAmount: 2000; groundColor: #445; groundColor: #aab18c; groundTexture: walkernoise" 
+        ></a-entity>
 
       <!-- ASSETS -->
 
@@ -39,7 +41,8 @@
 
       <!-- WELCOME WALL -->
 
-      <a-entity geometry="primitive: box; height:2; width: 4; depth:0.1" 
+      <a-entity 
+        geometry="primitive: box; height:2; width: 4; depth:0.1" 
         material="shader: flat; color: rgb(0,0,0); opacity:.1"
         position="0 1.5 -2"
         id="follower">
@@ -104,11 +107,9 @@
 
 
       <!-- Skills -->
-      <!-- material="shader: flat; color: rgb(0,0,0)" -->
       <a-entity 
-        src="#wall"
+        material="shader: flat; src: #wall"
         geometry="primitive: box; height:3; width: 4; depth:0.1" 
-        
         position="7.5 1.5 -7.5"
         rotation="0 -30 0">
         <a-text
@@ -164,8 +165,9 @@
       </a-entity>
 
       <!-- Work Experience -->
-      <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
-        material="shader: flat; color: rgb(0,0,0)"
+      <a-entity
+        geometry="primitive: box; height:3; width: 4; depth:0.1" 
+        material="shader: flat; src: #wall"
         position="-7.5 1.5 -7.5"
         rotation="0 30 0">
         <a-text
@@ -200,7 +202,7 @@
 
       <!-- Other Skills -->
       <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
-        material="shader: flat; color: rgb(0,0,0)"
+        material="shader: flat; src: #wall"
         position="-7.5 1.5 5.5"
         rotation="0 150 0">
         <a-text
@@ -233,9 +235,9 @@
       </a-entity>
 
 
-      <!-- my interests -->
+      <!-- Who I am? -->
       <a-entity geometry="primitive: box; height:3; width: 4; depth:0.1" 
-        material="shader: flat; color: rgb(0,0,0)"
+        material="shader: flat; src: #wall"
         position="7.5 1.5 5.5"
         rotation="0 210 0">
         <a-text
@@ -249,8 +251,8 @@
           scale=".7 .7 .7"
           anchor="left" 
           color="white"
-          value="I'm dev, music producer, game design student. I love art in all its expressions. I like politics. I don't have a tv I like coffee and pastries."></a-text>
-+
+          value="I'm dev, music producer and game design student. I love art in all its expressions. I like politics. I don't have a tv. I like coffee and pastries."></a-text>
+
         <a-text
           position="-1.75 -.3 0.25"
           scale=".7 .7 .7"
